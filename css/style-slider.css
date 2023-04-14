@@ -1,0 +1,206 @@
+.slick-list {
+    padding-bottom: 4px;
+}
+
+.slider {
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.slider>.slick-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    position: inherit;
+    margin: 1px auto 0;
+}
+
+
+.slide-inner {
+    margin: 12px 1.25vw 23px 1.02vw;
+    min-width: 225px;
+}
+
+
+
+.slick-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    margin-right: 52px;
+
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.slick-dots li:last-child {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+    margin-right: 0
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 8px;
+    height: 8px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+
+}
+
+.slick-dots li button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    background-color: rgba(255, 211, 56, 0.5);
+
+}
+
+.slick-dots li:last-child button:before {
+    background-color: rgba(255, 211, 56, 0.3);
+
+}
+
+
+.slick-dots li.slick-active button:before {
+    background-color: #FFD338;
+}
+
+
+.prev-arrow::before,
+.next-arrow::before {
+    background-size: 50px 50px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    content: "";
+}
+
+.prev-arrow::before {
+    background-image: url(../img/Arrow-left.png);
+}
+
+
+.next-arrow::before {
+    background-image: url(../img/Arrow-right.png);
+}
+
+.slide-arrow {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    -o-border-image: initial;
+    border-image: initial;
+    outline: none;
+    background: transparent;
+    padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+    .prev-arrow::before,
+    .next-arrow::before {
+        background-size: 70px 70px;
+        width: 70px;
+        height: 70px;
+    }
+
+    button.next-arrow {
+        top: 105%;
+        left: 80%;
+    }
+
+    button.prev-arrow {
+        top: 105%;
+        left: 20%;
+    }
+}
+
+
+@media screen and (min-width: 1441px) {
+
+    .prev-arrow::before,
+    .next-arrow::before {
+        background-size: 4.86vw 4.86vw;
+        display: inline-block;
+        width: 4.86vw;
+        height: 4.86vw;
+        content: "";
+    }
+
+    .slick-dots li button:before {
+        width: 0.694vw;
+        height: 0.694vw;
+    }
+
+    .slick-dots li {
+        margin-right: 0.347vw;
+    }
+
+    .slick-dots li button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 0.55vw;
+        height: 0.55vw;
+        padding: 0.347vw;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+
+    }
+
+    .slide-inner {
+        margin: 12px 1.25vw 1.59vw 1.02vw;
+
+    }
+
+}
+
+
+.next-arrow {
+    left: 104.1%;
+}
+
+.prev-arrow {
+    left: -4.1%;
+}
